@@ -21,7 +21,7 @@ b = 42
 print('Average =',(a + b)/2)
 
 
-# Given two numbers a and b. Find their sum, product and square of each number.
+""" Given two numbers a and b. Find their sum, product and square of each number."""
 a = 10
 b = 5
 print('Sum =',a + b)
