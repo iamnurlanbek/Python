@@ -69,9 +69,9 @@ number_b = int(input('Enter number b: '))
 
 # solution 1
 if number_a % 2 == 0:
-    even_nums = list(range(number_a,number_b + 1,2))
+    even_nums = list(range(number_a, number_b + 1,2))
 else:
-    even_nums = list(range(number_a + 1,number_b + 1,2))
+    even_nums = list(range(number_a + 1, number_b + 1,2))
 print(even_nums)
 
 # solution 2

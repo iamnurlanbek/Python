@@ -116,11 +116,11 @@ print(new_set)
 """5. Remove an Item if Present in the Set
 Write a Python program to remove an item from a set if it is present in the set."""
 
-new_set = {'apple','grape','melon','cherry'}
-element = 'apple'
-if element in new_set:
-    new_set.remove(element)
-else:
-    print("this element is not in set")
+# new_set = {'apple','grape','melon','cherry'}
+# element = 'apple'
+# if element in new_set:
+#     new_set.remove(element)
+# else:
+#     print("this element is not in set")
     
-print(new_set)
+# print(new_set)
