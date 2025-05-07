@@ -65,21 +65,21 @@ Natija:
 
 
 # option 1
-# def ndaraja(N):
-#     daraja = 1
-#     while daraja < N:
-#         if 2 ** daraja <= N:
-#             print(2 ** daraja)
-#             daraja += 1
-#         else:
-#             break
-# ndaraja(10)
+def ndaraja(N):
+    daraja = 1
+    while daraja < N:
+        if 2 ** daraja <= N:
+            print(2 ** daraja)
+            daraja += 1
+        else:
+            break
+ndaraja(10)
 
 
 # option 2
-# def ndaraja(N):
-#     a = 2
-#     while a <= N:
-#         print(a)
-#         a *= 2
-# ndaraja(10)
+def ndaraja(N):
+    a = 2
+    while a <= N:
+        print(a)
+        a *= 2
+ndaraja(10)
