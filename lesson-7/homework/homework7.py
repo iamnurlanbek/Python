@@ -15,16 +15,16 @@ True
 (Izoh: 7 soni faqat 1 va o'ziga bo'linadi, ya'ni tub son.)"""
 
 
-# def is_prime(n):
-#     if n > 1:
-#         for i in range(2, n):
-#             if n % i == 0:
-#                 return False
-#         else:
-#             return True
-#     else:
-#         return False           
-# print(is_prime(7))
+def is_prime(n):
+    if n > 1:
+        for i in range(2, n):
+            if n % i == 0:
+                return False
+        else:
+            return True
+    else:
+        return False           
+print(is_prime(7))
 
 """2. digit_sum(k) funksiyasi
 digit_sum(k) funksiyasini yozing, u k sonining raqamlari yig'indisini hisoblaydi.
