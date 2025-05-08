@@ -82,4 +82,8 @@ def ndaraja(N):
     while a <= N:
         print(a)
         a *= 2
+<<<<<<< HEAD
 ndaraja(10)
+=======
+ndaraja(10)
+>>>>>>> 36bd56776ef12149c0fccc1a7a0ef86c3380c483

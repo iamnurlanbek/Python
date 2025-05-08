@@ -245,5 +245,4 @@ for j in list2:
 print(new_list)
 
 
-
     
