@@ -36,9 +36,6 @@ print(insert_underscore("abcabcabcdeabcdefabcdefg"))
 
 
 
-
-
-
 """The provided code stub reads an integer, n, from STDIN. For all non-negative integers i where 0 <= i < n, print i^2.
 """
 n = int(input("Enter number:"))
@@ -243,7 +240,6 @@ for j in list2:
         new_list.append(j)
             
 print(new_list)
-
 
 
     

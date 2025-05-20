@@ -1,0 +1,5 @@
+# Fayl yaratamiz
+echo "test" > myfile.txtЦКККЯ
+# Faqat rootga ruxsat beramiz
+chmod 000 myfile.txt
+chmod 000 myfile.txt
