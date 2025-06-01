@@ -1,0 +1,27 @@
+[
+    {
+        "name": "Ali",
+        "age": 25,
+        "major": "Biology"
+    },
+    {
+        "name": "Salim",
+        "age": 15,
+        "major": "History"
+    },
+    {
+        "name": "Tolib",
+        "age": 45,
+        "major": "Math"
+    },
+    {
+        "name": "Botir",
+        "age": 30,
+        "major": "Science"
+    },
+    {
+        "name": "Sodiq",
+        "age": 19,
+        "major": "Law"
+    }
+]
