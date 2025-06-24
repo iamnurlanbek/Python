@@ -2,24 +2,14 @@
 write a Python script that reads the students.jon JSON file and prints details of each student.
 """
 
-# import json
+import json
 
-# students_data = [
-#     {'name':'Ali', 'age':25, 'major':'Biology'},
-#     {'name':'Salim', 'age':15, 'major':'History'},
-#     {'name':'Tolib', 'age':45, 'major':'Math'},
-#     {'name':'Botir', 'age':30, 'major':'Science'},
-#     {'name':'Sodiq', 'age':19, 'major':'Law'}
-# ]
+with open(r'C:\Python\lesson-14\homework\students.json') as file:
+    result = json.load(file)
+    print(result)
+    for student in result:
+        print(f"\nName: {student['name']}\nAge: {student['age']}\nMajor: {student['major']}")
 
-
-# with open(r'students.json', mode='w') as file:
-#     json.dump(students_data, file, indent=4)
-    
-# with open(r'C:\Python\lesson-14\homework\students.json', mode='r') as file:
-#     json_date = json.load(file)
-#     for date in json_date:
-#         print(f"Name: {date['name']}, Age: {date['age']}, Major: {date['major']}\n")
 
 
 """Task: Weather API
@@ -27,17 +17,60 @@ Use this url : https://openweathermap.org/
 Use the requests library to fetch weather data for a specific city(ex. your hometown: Tashkent) and print 
 relevant information (temperature, humidity, etc.).
 """
-import json
+
 import requests
-import datetime
+import pandas as pd
 
-myapi_key = 'dc76eb75a95459890a7d3d92123a0761'
+
+myapi = '3a6f50cf51b5dd565e38ce3b155b3077'
 city = 'Tashkent'
-url = f'https://api.openweathermap.org/data/2.5/weather?q={city}&appid={myapi_key}&units=metric&lang=uz'
 
-response = requests.get(url)
-data = response.json()
-print(data)
+response = requests.get(f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={myapi}")
+if response.status_code == 200:
+    data = response.json()
+    city_name = data['name']
+    temp_kelvin = data['main']['temp']
+    temp_celcius = temp_kelvin - 273.15
+    pressure = data['main']['pressure']
+    humidity = data['main']['humidity']
+    wind_speed = data['wind']['speed']
+    description = data['weather'][0]['description']
+    
+    print(f'Weather Information:')
+    print(f"City name: {city_name.capitalize()}")
+    print('Weather:', description)
+    print(f"Temprature: {temp_celcius:.2f}°C")
+    print(f"Pressure: {pressure} Pa")
+    print(f"Humidity: {humidity}%")
+    print(f"Wind speed: {wind_speed} m/s")
+else:
+    print('Ups, Error occured', response.status_code)
+    
+print('---------------------------------------------')
+weather_info = {
+    'city_name':[city_name],
+    'temprature':[temp_celcius],
+    'pressure':[pressure],
+    'humidity':[humidity],
+    'wind speed':[wind_speed],
+    'description':[description]
+}
+
+df = pd.DataFrame(weather_info)
+print(df)
+
+
+"""Task: JSON Modification
+Write a program that allows users to add new books, update existing book information, and delete books from the books.json JSON file."""
+
+
+"""Task: Movie Recommendation System
+Use this url http://www.omdbapi.com/ to fetch information about movies.
+Create a program that asks users for a movie genre and recommends a random movie from that genre."""
+
+
+
+
 
 
 
